@@ -49,3 +49,10 @@ ul {
 .game-info {
   margin-left: 20px;
 }
+.current-item {
+  font-weight: bold;
+}
+.square.highlight {
+  background: #eee;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0, 0.3) inset;
+}
