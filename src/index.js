@@ -25,7 +25,7 @@ class Board extends React.Component {
     );
   }
   createABoard() {
-    const sizeOfBoard = 5;
+    const sizeOfBoard = 3;
     let squares = [];
     let row = [];
     for (let i = 0; i < sizeOfBoard; i++) {
