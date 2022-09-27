@@ -330,7 +330,7 @@ function calculateWinner(board) {
   let isDrawing = true;
   for (let i = 0; i < sizeOfBoard; i++) {
     for (let j = 0; j < sizeOfBoard; j++) {
-      if (board[i] === "") {
+      if (board[i * sizeOfBoard + j] == null) {
         isDrawing = false;
       }
     }
