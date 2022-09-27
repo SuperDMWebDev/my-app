@@ -102,8 +102,8 @@ class Game extends React.Component {
 
     const moves = history.map((step, move) => {
       const latestMoveSquare = step.latestMoveSquare;
-      const col = 1 + (latestMoveSquare % 3);
-      const row = 1 + Math.floor(latestMoveSquare / 3);
+      const col = 1 + (latestMoveSquare % sizeOfBoard);
+      const row = 1 + Math.floor(latestMoveSquare / sizeOfBoard);
       const desc = move
         ? "Go to move # ( " + row + "," + col + " )"
         : "Go to game start";
@@ -273,6 +273,7 @@ function calculateWinner(board) {
       }
     }
   }
+  // hang cheo chinh
   for (let row = 0; row < sizeOfBoard - 4; row++) {
     for (let col = 0; col < sizeOfBoard - 4; col++) {
       if (
@@ -300,6 +301,7 @@ function calculateWinner(board) {
       }
     }
   }
+  // hang cheo phu
   for (let row = 0; row < sizeOfBoard - 4; row++) {
     for (let col = 0; col < sizeOfBoard; col++) {
       if (
@@ -327,6 +329,7 @@ function calculateWinner(board) {
       }
     }
   }
+  // check draw
   let isDrawing = true;
   for (let i = 0; i < sizeOfBoard; i++) {
     for (let j = 0; j < sizeOfBoard; j++) {
